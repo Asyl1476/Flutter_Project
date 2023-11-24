@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'Broni.dart'; // Замените на ваш экран деталей ресторана
-import 'Map.dart'; // Импорт GoogleMapsMarkerExample
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class RestaurantsScreen extends StatelessWidget {
   const RestaurantsScreen({Key? key}) : super(key: key);
@@ -30,27 +28,10 @@ class RestaurantsScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (restaurantName == 'Наша карта') {
-          // Создаем маркеры для демонстрации
-          List<Marker> markers = [
-            const Marker(
-              markerId: MarkerId('marker1'),
-              position: LatLng(55.7558, 37.6173), // Координаты местоположения
-              infoWindow: InfoWindow(
-                title: 'Местоположение 1',
-                snippet: 'Описание местоположения',
-              ),
-            ),
-            // Добавьте дополнительные маркеры здесь
-          ];
-
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => GoogleMapsMarkerExample(markers: markers),
-            ),
-          );
+          // Handle the case when 'Наша карта' is tapped
+          // You can add your logic here for this specific case
         } else {
-          // Обработка нажатия на другие элементы списка
+          // Handle the case when other elements in the list are tapped
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const Broni()), // Ваш экран деталей ресторана

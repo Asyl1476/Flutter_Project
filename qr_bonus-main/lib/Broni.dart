@@ -245,7 +245,7 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${widget.guestCount} гостя, ${widget.bookingDate.day}.${widget.bookingDate.month}.${widget.bookingDate.year}, 13:00 - 15:00',
+                    '${widget.guestCount} гостя, ${widget.bookingDate.day}.${widget.bookingDate.month}.${widget.bookingDate.year}, Choose Time',
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   SizedBox(height: 20),
